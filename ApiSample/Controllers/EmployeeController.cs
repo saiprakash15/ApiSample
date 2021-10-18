@@ -18,7 +18,7 @@ namespace ApiSample.Controllers
             _repo = repo;
         }
         [HttpGet]
-        //[Route("Details")]
+         [Route("Details")]
         public IEnumerable<EmployeeModels> GetDetails( int ID)
         {
             return _repo.GetManagerDetails(ID);
