@@ -1,5 +1,6 @@
 ﻿using ApiSample.Models;
 using ApiSample.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace ApiSample.Controllers
 {
     //[Route("api/[controller]")]
     //[ApiController]
+    [Authorize]
     public class EmployeeController : Controller
     {
         private IEmployeeRepository _repo;
